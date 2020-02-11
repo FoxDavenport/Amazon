@@ -20,6 +20,7 @@ public class HomePageGUI extends JFrame {
 	private final JButton GiftCards = new JButton("Gift Cards");
 
 	public HomePageGUI() {
+		
 		getContentPane().setBackground(new Color(175, 238, 238));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(800, 800, 800, 800);
@@ -73,16 +74,30 @@ public class HomePageGUI extends JFrame {
 		GiftCards.setBackground(Color.PINK);
 		GiftCards.setBounds(438, 62, 95, 44);
 		getContentPane().add(GiftCards);
-		
-		JButton Logo = new JButton("");        
-        Logo.setIcon(new ImageIcon(HomePageGUI.class.getResource("/GUI/22-226334_gaming-video-games-icon-png.png.jpeg")));
-        Logo.setBounds(16, 129, 322, 304);
+        
+        JButton Logo = new JButton("");        
+        Logo.setIcon(new ImageIcon(HomePageGUI.class.getResource("/GUI/st,small,215x235-pad,210x230,f8f8f8.u1.jpg")));
+        Logo.setBounds(6, 6, 206, 103);
         getContentPane().add(Logo);
         
         JButton VG = new JButton("");        
-        VG.setIcon(new ImageIcon(HomePageGUI.class.getResource("/GUI/st,small,215x235-pad,210x230,f8f8f8.u1.jpg")));
-        VG.setBounds(6, 6, 206, 103);
+        VG.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		VideoGameGUI frame= new VideoGameGUI();
+        		frame.setVisible(true);	
+        	}
+        });
+        
+        VG.setBackground(new Color(238, 238, 238));
+        VG.setIcon(new ImageIcon(HomePageGUI.class.getResource("/GUI/1161649.jpg")));
+        VG.setBounds(6, 164, 359, 115);
         getContentPane().add(VG);
+        
+        JLabel lblVideoGames = new JLabel("Video Games");
+        lblVideoGames.setBackground(Color.GREEN);
+        lblVideoGames.setBounds(133, 147, 122, 16);
+        getContentPane().add(lblVideoGames);
+		
 		
 	}
 }
