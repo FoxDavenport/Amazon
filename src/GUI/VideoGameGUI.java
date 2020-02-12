@@ -41,6 +41,18 @@ public class VideoGameGUI extends JFrame{
 		FE7.setIcon(new ImageIcon(VideoGameGUI.class.getResource("/GUI/220px-GBA_Fire_Emblem_Box.jpg")));
 		FE7.setBounds(6, 121, 236, 244);
         getContentPane().add(FE7);
+        
+        JButton GBVS = new JButton("");        
+        GBVS.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				GBVSGUI frame= new GBVSGUI();
+        		frame.setVisible(true);
+			}
+		});
+        GBVS.setBackground(new Color(238, 238, 238));
+        GBVS.setIcon(new ImageIcon(VideoGameGUI.class.getResource("/GUI/Screen Shot 2020-02-12 at 12.28.10 PM.png")));
+        GBVS.setBounds(254, 121, 236, 244);
+        getContentPane().add(GBVS);
 	}
 
 }
