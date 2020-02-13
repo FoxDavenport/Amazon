@@ -86,10 +86,7 @@ public class HomePageGUI extends JFrame {
         VG.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		VideoGameGUI frame= new VideoGameGUI();
-        		frame.removeAll();
-        		frame.setVG();
-        		frame.validate();
-        		frame.repaint();
+        		frame.setVisible(true);
         	}
         });
         

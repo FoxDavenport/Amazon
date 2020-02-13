@@ -22,10 +22,7 @@ public class VideoGameGUI extends JFrame{
 		Logo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				HomePageGUI frame= new HomePageGUI();
-				frame.removeAll();
-				frame.setHome();
-				frame.validate();
-				frame.repaint();
+				frame.setVisible(true);
 			}
 		});
 	    
@@ -64,7 +61,12 @@ public class VideoGameGUI extends JFrame{
 		setBounds(800, 800, 800, 800);
 		getContentPane().setLayout(null);
 		getContentPane().add(Logo);
-		getContentPane().add(FE7);
+		
+		FE7.setBackground(new Color(238, 238, 238));
+		FE7.setIcon(new ImageIcon(VideoGameGUI.class.getResource("/GUI/220px-GBA_Fire_Emblem_Box.jpg")));
+		FE7.setBounds(6, 121, 236, 244);
+        getContentPane().add(FE7);
+		
 		getContentPane().add(GBVS);
 
 	}
